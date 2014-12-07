@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+   <package name="manage" extends="struts-default">
+   		<!--管理员登陆跳转 -->
+        <action name="tologin" class="tologin" method="toLogin">
+	   	<result name="toLogin">manage/login.jsp</result>
+	    </action>
+	    <!--显示管理员登陆 -->
+	    <action name="ShowManage" class="ShowManage" method="ShowManage">
+	   	<result name="ShowManage">manage/showManage.jsp</result>
+	    </action>
+	    <!--管理员登陆 -->
+	     <action name="loginManage" class="loginManage" method="loginManage">
+	   	<result name="ManageA">manage/ManageA.jsp</result>
+	   	<result name="ManageB">manage/ManageB.jsp</result>
+	   	<result name="ManageC">manage/ManageC.jsp</result>
+	   	<result name="false">error.jsp</result>
+	    </action>
+   </package>
+</struts>

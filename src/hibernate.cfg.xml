@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">true</property>
+		<mapping resource="com/ibm/manage/value/ManageValue.hbm.xml"/>
+		
+		<mapping resource="com/ibm/manageA/value/Manageowner.hbm.xml"/>
+		<mapping resource="com/ibm/manageA/value/Manageservice.hbm.xml"/>
+		
+		<mapping resource="com/ibm/manageB/value/Manageplot.hbm.xml"/>
+		<mapping resource="com/ibm/manageB/value/Manageservicefund.hbm.xml"/>
+		<mapping resource="com/ibm/manageB/value/upkeepcosts.hbm.xml"/>
+		
+		<mapping resource="com/ibm/manageC/value/Managechargemanagement.hbm.xml"/>
+		<mapping resource="com/ibm/manageC/value/Managehome.hbm.xml"/>
+		<mapping resource="com/ibm/manageC/value/Manageowners.hbm.xml"/>
+		<mapping resource="com/ibm/manageC/value/Managepark.hbm.xml"/>
+		<mapping resource="com/ibm/manageC/value/Manageparkmanage.hbm.xml"/>
+		<mapping resource="com/ibm/manageC/value/Manageuser.hbm.xml"/>
+		<mapping resource="com/ibm/manageC/value/statisticsowner.hbm.xml"/>
+		<mapping resource="com/ibm/manageC/value/statisticspark.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>
+

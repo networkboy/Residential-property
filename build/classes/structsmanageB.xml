@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+   <package name="manageB" extends="struts-default">
+	    <!--显示管理维修基金信息-->
+	    <action name="showManageservicefund" class="showManageservicefund" method="showManageservicefund">
+	   	<result name="showManageservicefund">manageB/BManageservicefund.jsp</result> 
+	   	</action>
+	   	<!-- 增加管理维修基金信息-->
+	   	<action name="addManageservicefund" class="addManageservicefund" method="addManageservicefund">
+	   	<result name="addManageservicefund" type="chain">showManageservicefund</result> 
+	   	</action>
+	   	<!--删除管理维修基金信息-->
+	   	<action name="deleteManageservicefund" class="deleteManageservicefund" method="deleteManageservicefund">
+	    <result name="deleteManageservicefund" type="chain">showManageservicefund</result>
+	   	</action>
+	   	<!--更新管理维修基金信息-->
+	   	<action name="updateManageservicefund" class="updateManageservicefund" method="updateManageservicefund">
+	    <result name="updateManageservicefund" type="chain">showManageservicefund</result>
+	   	</action>
+	   	<!--显示管理小区维护项目信息-->
+	   	<action name="showManageplot" class="showManageplot" method="showManageplot">
+	   	<result name="showManageplot">manageB/BManageplot.jsp</result>
+	   	</action>
+	    <!--删除管理小区维护项目信息-->
+	    <action name="deleteManageplot" class="deleteManageplot" method="deleteManageplot">
+	   	<result name="deleteManageplot" type="chain">showManageplot</result>
+	   	</action>
+	   	<!--增加管理小区维护项目信息-->
+	    <action name="addManageplot" class="addManageplot" method="addManageplot">
+	   	<result name="addManageplot" type="chain">showManageplot</result>
+	   	</action>
+	   	<!--更新管理小区维护项目信息-->
+	    <action name="updateManageplot" class="updateManageplot" method="updateManageplot">
+	   	<result name="updateManageplot" type="chain">showManageplot</result>
+	   	</action>
+	   	<!--显示管理维修费用结算信息-->
+	   	<action name="showupkeepcosts" class="showupkeepcosts" method="showupkeepcosts">
+	   	<result name="showupkeepcosts">manageB/Bupkeepcosts.jsp</result>
+	   	</action>
+	    <!--删除管理维修费用结算信息-->
+	    <action name="deleteupkeepcosts" class="deleteupkeepcosts" method="deleteupkeepcosts">
+	   	<result name="deleteupkeepcosts" type="chain">showupkeepcosts</result>
+	   	</action>
+	   	<!--增加管理维修费用结算信息-->
+	    <action name="addupkeepcosts" class="addupkeepcosts" method="addupkeepcosts">
+	   	<result name="addupkeepcosts" type="chain">showupkeepcosts</result>
+	   	</action>
+	   	<!--更新管理维修费用结算信息-->
+	    <action name="updateupkeepcosts" class="updateupkeepcosts" method="updateupkeepcosts">
+	   	<result name="updateupkeepcosts" type="chain">showupkeepcosts</result>
+	   	</action>
+   </package>
+</struts>

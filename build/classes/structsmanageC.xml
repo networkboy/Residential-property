@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+   <package name="manageC" extends="struts-default">
+	    <!--显示管理物业收费标准-->
+	    <action name="showManagechargemanagement" class="showManagechargemanagement" method="showManagechargemanagement">
+	   	<result name="showManagechargemanagement">manageC/CManagechargemanagement.jsp</result> 
+	   	</action>
+	   	<!-- 增加管理物业收费标准-->
+	   	<action name="addManagechargemanagement" class="addManagechargemanagement" method="addManagechargemanagement">
+	   	<result name="addManagechargemanagement" type="chain">showManagechargemanagement</result> 
+	   	</action>
+	   	<!--删除管理物业收费标准-->
+	   	<action name="deleteManagechargemanagement" class="deleteManagechargemanagement" method="deleteManagechargemanagement">
+	    <result name="deleteManagechargemanagement" type="chain">showManagechargemanagement</result>
+	   	</action>
+	   	<!--更新管理物业收费标准-->
+	   	<action name="updateManagechargemanagement" class="updateManagechargemanagement" method="updateManagechargemanagement">
+	    <result name="updateManagechargemanagement" type="chain">showManagechargemanagement</result>
+	   	</action>
+	   	<!--显示管理房屋信息-->
+	   	<action name="showManagehome" class="showManagehome" method="showManagehome">
+	   	<result name="showManagehome">manageC/CManagehome.jsp</result>
+	   	</action>
+	    <!--删除管理房屋信息-->
+	    <action name="deleteManagehome" class="deleteManagehome" method="deleteManagehome">
+	   	<result name="deleteManagehome" type="chain">showManagehome</result>
+	   	</action>
+	   	<!--增加管理房屋信息-->
+	    <action name="addManagehome" class="addManagehome" method="addManagehome">
+	   	<result name="addManagehome" type="chain">showManagehome</result>
+	   	</action>
+	   	<!--更新管理房屋信息-->
+	    <action name="updateManagehome" class="updateManagehome" method="updateManagehome">
+	   	<result name="updateManagehome" type="chain">showManagehome</result>
+	   	</action>
+	   	<!--显示管理业主-->
+	   	<action name="showManageowners" class="showManageowners" method="showManageowners">
+	   	<result name="showManageowners">manageC/CManageowners.jsp</result>
+	   	</action>
+	    <!--删除管理业主-->
+	    <action name="deleteManageowners" class="deleteManageowners" method="deleteManageowners">
+	   	<result name="deleteManageowners" type="chain">showManageowners</result>
+	   	</action>
+	   	<!--增加管理业主-->
+	    <action name="addManageowners" class="addManageowners" method="addManageowners">
+	   	<result name="addManageowners" type="chain">showManageowners</result>
+	   	</action>
+	   	<!--更新管理业主-->
+	    <action name="updateManageowners" class="updateManageowners" method="updateManageowners">
+	   	<result name="updateManageowners" type="chain">showManageowners</result>
+	   	</action>
+	    <!--显示管理停车位-->
+	   	<action name="showManagepark" class="showManagepark" method="showManagepark">
+	   	<result name="showManagepark">manageC/CManagepark.jsp</result>
+	   	</action>
+	    <!--删除管理停车位-->
+	    <action name="deleteManagepark" class="deleteManagepark" method="deleteManagepark">
+	   	<result name="deleteManagepark" type="chain">showManagepark</result>
+	   	</action>
+	   	<!--增加管理停车位-->
+	    <action name="addManagepark" class="addManagepark" method="addManagepark">
+	   	<result name="addManagepark" type="chain">showManagepark</result>
+	   	</action>
+	   	<!--更新管理停车位-->
+	    <action name="updateManagepark" class="updateManagepark" method="updateManagepark">
+	   	<result name="updateManagepark" type="chain">showManagepark</result>
+	   	</action>
+	    <!--显示管理停车位收费标准-->
+	   	<action name="showManageparkmanage" class="showManageparkmanage" method="showManageparkmanage">
+	   	<result name="showManageparkmanage">manageC/CManageparkmanage.jsp</result>
+	   	</action>
+	    <!--删除管理停车位收费标准-->
+	    <action name="deleteManageparkmanage" class="deleteManageparkmanage" method="deleteManageparkmanage">
+	   	<result name="deleteManageparkmanage" type="chain">showManageparkmanage</result>
+	   	</action>
+	   	<!--增加管理停车位收费标准-->
+	    <action name="addManageparkmanage" class="addManageparkmanage" method="addManageparkmanage">
+	   	<result name="addManageparkmanage" type="chain">showManageparkmanage</result>
+	   	</action>
+	   	<!--更新管理停车位收费标准-->
+	    <action name="updateManageparkmanage" class="updateManageparkmanage" method="updateManageparkmanage">
+	   	<result name="updateManageparkmanage" type="chain">showManageparkmanage</result>
+	   	</action>
+	   	<!--显示管理用户-->
+	   	<action name="showManageuser" class="showManageuser" method="showManageuser">
+	   	<result name="showManageuser">manageC/CManageuser.jsp</result>
+	   	</action>
+	    <!--删除管理用户-->
+	    <action name="deleteManageuser" class="deleteManageuser" method="deleteManageuser">
+	   	<result name="deleteManageuser" type="chain">showManageuser</result>
+	   	</action>
+	   	<!--增加管理用户-->
+	    <action name="addManageuser" class="addManageuser" method="addManageuser">
+	   	<result name="addManageuser" type="chain">showManageuser</result>
+	   	</action>
+	   	<!--更新管理用户-->
+	    <action name="updateManageuser" class="updateManageuser" method="updateManageuser">
+	   	<result name="updateManageuser" type="chain">showManageuser</result>
+	   	</action>
+	   	<!--显示统计物业费缴纳情况-->
+	   	<action name="showstatisticsowner" class="showstatisticsowner" method="showstatisticsowner">
+	   	<result name="showstatisticsowner">manageC/Cstatisticsowner.jsp</result>
+	   	</action>
+	    <!--删除统计物业费缴纳情况-->
+	    <action name="deletestatisticsowner" class="deletestatisticsowner" method="deletestatisticsowner">
+	   	<result name="deletestatisticsowner" type="chain">showstatisticsowner</result>
+	   	</action>
+	   	<!--增加统计物业费缴纳情况-->
+	    <action name="addstatisticsowner" class="addstatisticsowner" method="addstatisticsowner">
+	   	<result name="addstatisticsowner" type="chain">showstatisticsowner</result>
+	   	</action>
+	   	<!--更新统计物业费缴纳情况-->
+	    <action name="updatestatisticsowner" class="updatestatisticsowner" method="updatestatisticsowner">
+	   	<result name="updatestatisticsowner" type="chain">showstatisticsowner</result>
+	   	</action>
+	   	<!--显示统计停车费缴费情况-->
+	   	<action name="showstatisticspark" class="showstatisticspark" method="showstatisticspark">
+	   	<result name="showstatisticspark">manageC/Cstatisticspark.jsp</result>
+	   	</action>
+	    <!--删除统计停车费缴费情况-->
+	    <action name="deletestatisticspark" class="deletestatisticspark" method="deletestatisticspark">
+	   	<result name="deletestatisticspark" type="chain">showstatisticspark</result>
+	   	</action>
+	   	<!--增加统计停车费缴费情况-->
+	    <action name="addstatisticspark" class="addstatisticspark" method="addstatisticspark">
+	   	<result name="addstatisticspark" type="chain">showstatisticspark</result>
+	   	</action>
+	   	<!--更新统计停车费缴费情况-->
+	    <action name="updatestatisticspark" class="updatestatisticspark" method="updatestatisticspark">
+	   	<result name="updatestatisticspark" type="chain">showstatisticspark</result>
+	   	</action>
+   </package>
+</struts>

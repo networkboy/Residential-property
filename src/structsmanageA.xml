@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+   <package name="manageA" extends="struts-default">
+	    <!--显示管理业主缴纳物业管理费-->
+	    <action name="showManageowner" class="showManageowner" method="showManageowner">
+	   	<result name="showManageowner">manageA/AManageowner.jsp</result> 
+	   	</action>
+	   	<!-- 增加显示管理业主缴纳物业管理费 -->
+	   	<action name="addManageowner" class="addManageowner" method="addManageowner">
+	   	<result name="addManageowner" type="chain">showManageowner</result> 
+	   	</action>
+	   	<!--删除业主缴纳物业管理费-->
+	   	<action name="deleteManageowner" class="deleteManageowner" method="deleteManageowner">
+	    <result name="deleteManageowner" type="chain">showManageowner</result>
+	   	</action>
+	   	<!--更新业主缴纳物业管理费-->
+	   	<action name="updateManageowner" class="updateManageowner" method="updateManageowner">
+	    <result name="updateManageowner" type="chain">showManageowner</result>
+	   	</action>
+	   	<!--显示管理维修信息-->
+	   	<action name="showManageservice" class="showManageservice" method="showManageservice">
+	   	<result name="showManageservice">manageA/AManageservice.jsp</result>
+	   	</action>
+	    <!--删除管理维修信息-->
+	    <action name="deleteManageservice" class="deleteManageservice" method="deleteManageservice">
+	   	<result name="deleteManageservice" type="chain">showManageservice</result>
+	   	</action>
+	   	<!--增加管理维修信息-->
+	    <action name="addManageservice" class="addManageservice" method="addManageservice">
+	   	<result name="addManageservice" type="chain">showManageservice</result>
+	   	</action>
+	   	<!--更新管理维修信息-->
+	    <action name="updateManageservice" class="updateManageservice" method="updateManageservice">
+	   	<result name="updateManageservice" type="chain">showManageservice</result>
+	   	</action>
+   </package>
+</struts>
